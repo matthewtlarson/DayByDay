@@ -17,12 +17,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-<<<<<<< HEAD
-
-const hbs = exphbs.create({ /*helpers*/ });
-=======
 const hbs = exphbs.create({ helpers });
->>>>>>> ddfaa3f16a0d71574ad1ba1d4f2b6dc29dacdbb6
 
 const sess = {
     secret: 'ETHERUEM CLASSIC',
@@ -34,11 +29,6 @@ const sess = {
     })
 };
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ddfaa3f16a0d71574ad1ba1d4f2b6dc29dacdbb6
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
