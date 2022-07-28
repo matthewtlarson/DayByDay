@@ -1,4 +1,18 @@
+
 body{
   background-color: #1e1f1b;
   font-family: 'Lora', serif;
+}
+
+#social{
+  position:fixed;
+  bottom: 10
+}
+
+a{
+  font-family: 'Abril Fatface', cursive;
+}
+
+p{
+  font-family: 'Kaisei Opti', serif;
 }
