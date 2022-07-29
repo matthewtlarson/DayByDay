@@ -1,10 +1,9 @@
-//make it easier access to pull at once, collects routes for easy access
+const router = require('express').Router();
 
-
-
-/*const router = require('express').Router();
-const homeRoutes = require('./homeRoutes');
+const apiRoutes = require('./api');
+const homeRoutes = require('./home-routes');
 
 router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 
-module.exports = router;*/
+module.exports = router;

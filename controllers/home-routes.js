@@ -1,31 +1,41 @@
-//takes from the model to the controller to the view//
-
-
-
-
-/*const router = require('express').Router();
+const router = require('express').Router();
 const { User } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  // TODO: Render template with Sequelize data
+// Prevent non logged in users from viewing the homepage
+router.get('/', withAuth, async (req, res) => {
   try {
-    const dbUserData = await User.findAll ({
-      order: [
-        ["name", "ASC"]
-      ],
-      attributes: {
-        exclude: ["password"]
-      }
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['name', 'ASC']],
     });
 
+    const users = userData.map((project) => project.get({ plain: true }));
 
-    const users = userData.map(user => user.get({plain: true}))
-
-
-  res.render('homepage', { users });
+    res.render('homepage', {
+      users,
+      // Pass the logged in flag to the template
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-module.exports = router;*/
+router.get('/login', (req, res) => {
+  // If a session exists, redirect the request to the homepage//do we need async?
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('main');
+});
+
+router.get('/signup', (req, res) => {
+  
+})
+
+
+
+module.exports = router;

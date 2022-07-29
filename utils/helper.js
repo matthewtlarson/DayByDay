@@ -1,6 +1,6 @@
 //other exports, the javascriupt toolkit we want to use// 
 
-/*module.exports = {
+module.exports = {
   get_emoji: () => {
     const randomNum = Math.random();
     let book = "📗";
@@ -13,4 +13,4 @@
 
     return `<span for="img" aria-label="book">${book}</span>`;
   },
-};*/
+};
