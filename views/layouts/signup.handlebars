@@ -1,5 +1,5 @@
-<div id="sign-up-main" class="modal">
-    <span onclick="document.getElementById('sign-up-main').style.display='none'"
+<div id="signupbtn" class="modal">
+    <span onclick="document.getElementById('signupbtn').style.display='none'"
     class="close" title="Close Modal"></span>
     <form class="modal-content" action="jass.css"/>
     <div class="container"></div>
@@ -13,6 +13,15 @@
         <input type="password" placeholder="enter password" name="psw" required>
 
         <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="re-enter password" name="psw-repeat" required
+        <input type="password" placeholder="re-enter password" name="psw-repeat" required>
+
+        <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember Me
+        </label>
+
+           <div class="clearfix">
+            <button type="submit" class="">Sign Up</button>
+           </div>
+        </label>
     </form>
 </div>
