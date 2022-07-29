@@ -1,41 +1,16 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Profile } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Prevent non logged in users from viewing the homepage
-router.get('/', withAuth, async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-    });
-
-    const users = userData.map((project) => project.get({ plain: true }));
-
-    res.render('homepage', {
-      users,
-      // Pass the logged in flag to the template
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get('/', async (req, res) => {
+  // Send the rendered Handlebars.js template back as the response
+  res.render('welcome'); //awaiting the user information to take the user to main
 });
-
-router.get('/login', (req, res) => {
-  // If a session exists, redirect the request to the homepage//do we need async?
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
-
+router.get('/signup', async (req, res) => {
+  res.render('signup');
+});
+router.get('/main', async (req, res) => { //grab all of the user info (graph data progress favorites etc)
   res.render('main');
 });
-
-router.get('/signup', (req, res) => {
-  
-})
-
-
 
 module.exports = router;

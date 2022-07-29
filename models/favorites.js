@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize')
-const sequalize = require('../config/connection');
+const sequelize = require('../config/connection');
 
 class Favorites extends Model {}
 
@@ -23,7 +23,7 @@ Favorites.init(
         type: DataTypes.INTEGER,
         references: {
           model: 'profile',
-          key: id,
+          key: 'id',
         },
       },
   },
