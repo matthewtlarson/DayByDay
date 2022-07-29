@@ -15,7 +15,7 @@ input[type=text]:focus, input [type=password]:focus {
 }
 
 button {
-    background-color: ;
+    background-color: gold;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -50,7 +50,7 @@ button:hover {
 }
 
 .modal-content {
-    background-color: ;
+    background-color: gold;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
     width: 80%;
@@ -77,6 +77,6 @@ hr {
 
 @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
-      width: 100%;
+    width: 100%;
     }
-  }
+}
