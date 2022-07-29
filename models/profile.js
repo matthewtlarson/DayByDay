@@ -36,7 +36,7 @@ Profile.init(
       return newUserData;
     },
   },
-  
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
