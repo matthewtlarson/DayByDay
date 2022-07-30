@@ -3,11 +3,13 @@ body{
   background-color: #e2eac9;
   font-family: 'Lora', serif;
 }
-
-#social{
-  position:fixed;
-  bottom: 10
+.login{
+  margin-bottom: 10px;
+  width: 200px;
+  
 }
+
+
 
 a{
   font-family: 'Abril Fatface', cursive;
