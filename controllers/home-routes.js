@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
-  res.render('welcome'); //awaiting the user information to take the user to main
+  res.render('welcome-page'); //awaiting the user information to take the user to main
 });
 router.get('/signup', async (req, res) => {
   res.render('signup');
