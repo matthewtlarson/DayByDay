@@ -31,13 +31,14 @@ router.get('/signup', async (req, res) => {
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
+    
     const newUser = {
       id: req.body.id,
       username: req.body.username,
       email: req.body.email,
-      password: req.body.password
-    }
-    if(newUser) {
+      password: req.body.password,
+    };
+    if (newUser) {
       for (let i = 0; i < users.length; i++) {
         if (newUser.username === users.username[i]) {
           res.redirect('/');
@@ -52,7 +53,7 @@ router.get('/signup', async (req, res) => {
 });
 
 
-router.get('/login', async (req, res) => { //grab all of the user info (graph data progress favorites etc)
+router.get('/login', (req, res) => { //grab all of the user info (graph data progress favorites etc)
   if (req.session.logged_in) {
     res.redirect('/');
     return;
