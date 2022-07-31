@@ -40,6 +40,13 @@ Table.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'profile',
+        key: 'id',
+      },
+    },
     },
   {
     sequelize,
