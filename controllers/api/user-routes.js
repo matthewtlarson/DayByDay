@@ -18,3 +18,5 @@ router.post('/main/dailyProgress', async (req, res) => {
 router.post('/main/logout', async (req, res) => {
   //this will be true or false depending on if the button is clicked and send the data that the user should be logged out or back to sign in page
 });
+
+module.exports = router;
