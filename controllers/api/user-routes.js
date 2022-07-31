@@ -6,6 +6,10 @@ router.post('/signup', async (req, res) => {
   //going to need to post their username email and password
 });
 
+router.post('/login', async (req, res) => {
+  //this will be the scoring for their overalls and adding them to our database 
+});
+
 router.post('/main/favorites', async (req, res) => {
   //going to be a request for users to be able to add their favorites
 });
