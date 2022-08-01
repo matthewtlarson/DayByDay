@@ -4,9 +4,9 @@
 DROP DATABASE IF exists user_db;
 CREATE DATABASE user_db;
 
-/* USE user_db;
+USE user_db;
 
-CREATE TABLE user_profile (
+/*CREATE TABLE user_profile (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(20) NOT NULL,
     password VARCHAR(20) NOT NULL,
