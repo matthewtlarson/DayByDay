@@ -20,13 +20,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
-<<<<<<< HEAD
-    "heroku": "^7.3.0",
-=======
     "heroku": "^7.7.8",
     "materialize": "^1.0.0",
     "materialize-css": "^1.0.0-rc.2",
->>>>>>> cb89364f66dbee7f117a747b6b73fec4a6887029
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },
