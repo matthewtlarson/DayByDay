@@ -13,7 +13,7 @@ Table.belongsTo(Profile, {
 
 Profile.hasOne(Favorites, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE',
 });
 
 Favorites.belongsTo(Profile, {
