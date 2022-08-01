@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Favorites } = require('../../models');
 
-router.put('/add', async (req, res) => {
+router.post('/add', async (req, res) => {
     try {
         const newFav = await Favorites.create({
             author: req.body.author,
