@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const { Favorites } = require('../../models');
 
@@ -15,3 +16,4 @@ router.post('/add', async (req, res) => {
 });
 
 module.exports = router;
+
