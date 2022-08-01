@@ -4,7 +4,7 @@
 DROP DATABASE IF exists user_db;
 CREATE DATABASE user_db;
 
-USE user_db;
+/* USE user_db;
 
 CREATE TABLE user_profile (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -38,3 +38,5 @@ CREATE TABLE user_favorites (
     REFERENCES user_profile(id)
     ON DELETE SET NULL
 );
+
+*/ 
