@@ -23,7 +23,7 @@ Favorites.init(
         type: DataTypes.INTEGER,
         references: {
           model: 'profile',
-          key: id,
+          key: 'id',
         },
       },
   },
