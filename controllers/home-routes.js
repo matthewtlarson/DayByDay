@@ -58,7 +58,6 @@ router.get('/login', (req, res) => { //grab all of the user info (graph data pro
     res.redirect('/');
     return;
   }
-
   res.render('welcome');
 });
 
