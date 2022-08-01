@@ -22,12 +22,14 @@ const profileData = [
     "password": "mikeauck234"
   },
   {
-    "name": "AndrewTate",
+    "username": "AndrewTate",
     "email": "andrewtate@gmail.com",
     "password": "highvaluemale1"
   }
 ];
 
-const seedProfile = () => Profile.bulkCreate(profileData);
+const seedProfile = () => Profile.bulkCreate(profileData, {
+  individualHooks:true
+});
 
 module.exports = seedProfile;

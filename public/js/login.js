@@ -1,8 +1,8 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#username-login').value.trim(); //placeholder
-    const password = document.querySelector('#password-login').value.trim(); //placeholder
+    const username = document.querySelector('#username').value.trim(); //placeholder
+    const password = document.querySelector('#password').value.trim(); //placeholder
   
     if (username && password) {
       const response = await fetch('/api/users/login', { //placeholder
@@ -19,14 +19,12 @@ const loginFormHandler = async (event) => {
     }
   };
   
-document.querySelector('.login-form'); //placeholder
-document.addEventListener('submit', loginFormHandler); //placeholder
+document.querySelector('#login-button') //placeholder
+        .addEventListener('click', loginFormHandler); //placeholder
 
-document.querySelector('.signupbutton'); //placeholder
-document.addEventListener('submit', function () {
-  const signupredirect = await fetch('/signup', {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json'},
-  });
-})
+document.querySelector('#signup-button')//placeholder
+        .addEventListener('click', function () {
+  document.location.replace('/signup');
+});
+
 
