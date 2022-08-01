@@ -2,22 +2,22 @@ const Profile = require('./profile');
 const Favorites = require('./favorites');
 const Table = require('./table');
 
-Profile.hasOne(Table, {
+Profile.hasMany(Table, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
 Table.belongsTo(Profile, {
-  foreignKey: 'id'
+  foreignKey: 'user_id'
 });
 
-Profile.hasOne(Favorites, {
+Profile.hasMany(Favorites, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
 });
 
 Favorites.belongsTo(Profile, {
-  foreignKey: 'id'
+  foreignKey: 'user_id'
 });
 
 
