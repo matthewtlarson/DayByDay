@@ -6,25 +6,19 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try {
-    const userData = await Profile.findAll({
+    const userData = await Profile.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      order: [['username', 'ASC']],
       include: [{ model: Favorites}, { model: Table }]
     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
-    for (var i; i < users.length; i++) {
-      if(session.user_id === id) {
-        var userProfile = users[i];
-        }
-    };
-
+    const userProfile = userData.get({plain: true});
+  
     res.render('homepage', {
       userProfile,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
