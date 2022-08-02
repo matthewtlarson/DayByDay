@@ -2,6 +2,7 @@ const { Table } = require('../models');
 
 const tableData = [
     {
+        "date_added": '2022-07-31',
         "physical_rating": 2,
         "emotional_rating": 3,
         "spiritual_rating": 6,
@@ -11,6 +12,7 @@ const tableData = [
         "user_id": 1,
     },
     {
+        "date_added": '2022-08-01',
         "physical_rating": 4,
         "emotional_rating": 6,
         "spiritual_rating": 9,
@@ -20,6 +22,7 @@ const tableData = [
         "user_id": 1
     },
     {
+        "date_added": '2022-07-31',
         "physical_rating": 3,
         "emotional_rating": 4,
         "spiritual_rating": 5,
@@ -29,6 +32,7 @@ const tableData = [
         "user_id": 2,
     },
     {
+        "date_added": '2022-08-01',
         "physical_rating": 4,
         "emotional_rating": 9,
         "spiritual_rating": 10,
@@ -38,6 +42,7 @@ const tableData = [
         "user_id": 2
     },
     {
+        "date_added": '2022-07-31',
         "physical_rating": 3,
         "emotional_rating": 4,
         "spiritual_rating": 4,

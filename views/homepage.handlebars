@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- CSS only -->
@@ -16,8 +17,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src= "/js/quotes.js"></script>
-    <script src= "/js/dailyprogress.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Homepage</title>
 
@@ -26,12 +25,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link
-      href="css/materialize.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link
       href= "/css/layouts/homepage.css"
       type="text/css"
@@ -39,28 +33,15 @@
       media="screen,projection"
     />
   </head>
-  <body class="$blue-600">
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">DayByDay</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Logout</a></li>
-        </ul>
 
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-      </div>
-    </nav>
+
+  <body class="$blue-600">
 
     <div id="index-banner" class="parallax-container">
       <div class="section no-pad-bot">
         <div class="container">
           <br /><br />
-          <h1 class="header center -text text-lighten-2">Welcome Home!</h1>
+          <h1 class="header center -text text-lighten-2">DayByDay</h1>
           <div class="row center">
             <h5 class="header col s12 light">
               Your first step in the right direction
@@ -68,9 +49,9 @@
           </div>
           <div class="row center">
             <a
-              href="https://www.youtube.com/watch?v=FGO8IWiusJo"
+              href="https://www.youtube.com/watch?v=FGO8IWiusJo" target="_blank"
               id="download-button"
-              class="btn-large waves-effect waves-light orange lighten-1"
+              class="btn-large waves-effect waves-light" style="background-color:#FFD700; color:black"
               >Start the day with meditation</a
             >
           </div>
@@ -83,182 +64,50 @@
     </div>
 
     <div class="container">
-      <div class="section">
-        <!--   Icon Section   -->
-        <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text">
-                <i class="material-icons">fingerprint</i>
-              </h2>
-              <h5 class="center">Personalized Data</h5>
-
-              <p class="light center">
-                Our statistics will be individualized towards you alone
-              </p>
+      {{#each userProfile.favorites as |favorite|}}
+        <div class="section">
+            <div class="column" style="background-color: #030303; color: rgba(190, 168, 20, 0.87)" id="favoriteslist">
+                <author>{{favorite.author}}</author>
+                <quote>{{favorite.quote}}</quote>
             </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text">
-                <i class="material-icons">group</i>
-              </h2>
-              <h5 class="center">User Experience Focused</h5>
-
-              <p class="light center">You are our top priority</p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text">
-                <i class="material-icons">face</i>
-              </h2>
-              <h5 class="center">Your Flourishing Self</h5>
-
-              <p class="light center">
-                Always work on yourself with confidence Stay consistent and
-                perseverant
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
- 
-    <canvas id="myChart" width="400" height="400"></canvas>
-
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">Graph</h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax">
-        <img src="mid.jpeg" alt="Unsplashed background img 2" />
-      </div>
+      {{/each}}
     </div>
 
     <div class="container">
       <div class="section">
         <div class="row">
           <div class="col s12 center">
+            <ul>
+            <button id="genQuote">Generate Quote</button>
+            <button id="saveQuote">Save</button></ul>
+            <textarea name="quote" id="quoteID" cols="30" rows="10"></textarea>
             <h3><i class="mdi-content-send brown-text"></i></h3>
             <h4>Weekly Calender</h4>
             <p class="center-align light">
               Below, you can view the progress that you've made for the week.
               Keep up the hard work and keep pushing forward, you got this!
             </p>
-            <ul>
-  <li>Quote</li>
-<button>Save</button></ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div
-        class="column"
-        style="background-color: #030303; color: rgba(190, 168, 20, 0.87)"
-      >
-        <h2><u>Monday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-      <div
-        class="column"
-        style="background-color: #030303; color: rgb(190, 168, 20, 0.87)"
-      >
-        <h2><u>Tuesday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-      <div
-        class="column"
-        style="background-color: #030303; color: rgb(190, 168, 20, 0.87)"
-      >
-        <h2><u>Wednesday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-      <div
-        class="column"
-        style="background-color: #030303; color: rgb(190, 168, 20, 0.87)"
-      >
-        <h2><u>Thursday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-      <div
-        class="column"
-        style="background-color: #030303; color: rgb(190, 168, 20, 0.87)"
-      >
-        <h2><u>Friday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-      <div
-        class="column"
-        style="background-color: #030303; color: rgb(190, 168, 20, 0.87)"
-      >
-        <h2><u>Saturday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-      <div
-        class="column"
-        style="background-color: #030303; color: rgb(190, 168, 20, 0.87)"
-      >
-        <h2><u>Sunday</u></h2>
-        <h4>Overall Rating:</h4>
-        <p>Spiritual rating:</p>
-        <p>Emotional rating:</p>
-        <p>Physical rating:</p>
-        <p>Mental rating:</p>
-        <p>Social rating:</p>
-      </div>
-    </div>
 
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">Calender</h5>
-          </div>
+  <div class="row border border-warning">
+      {{#each userProfile.tables as |progress|}}
+        <div class="column" style="background-color: #e0e0e0; color: #000000">
+        <h4>{{progress.date_added}}</h4>
+        <p>Overall Rating: {{progress.overall_rating}}</p>
+        <p>Spiritual rating: {{progress.spiritual_rating}}</p>
+        <p>Emotional rating: {{progress.emotional_rating}}</p>
+        <p>Physical rating: {{progress.physical_rating}}</p>
+        <p>Mental rating: {{progress.mental_rating}}</p>
+        <p>Social rating: {{progress.social_rating}}</p>
         </div>
-      </div>
-      <div class="parallax">
-        <img src="bottom.jpeg" alt="Unsplashed background img 3" />
-      </div>
+      {{/each}}
     </div>
+    
 
     <footer class="page-footer black">
       <div class="container">
@@ -276,22 +125,22 @@
             <ul>
               <li>
                 <a
-                  class="yellow-text"
+                  style="color: #FFD700"
                   href="https://www.linkedin.com/in/maximus-cristian/"
                   >Maximus' LinkedIn</a
                 >
               </li>
               <li>
                 <a
-                  class="yellow-text"
+                  style="color: #FFD700"
                   href="https://www.linkedin.com/in/matthew-larson51/"
                   >Matthew's LinkedIn</a
                 >
               </li>
-              <li><a class="yellow-text" href="#!">Ryan's LinkedIn</a></li>
+              <li><a style="color: #FFD700" href="#!">Ryan's LinkedIn</a></li>
               <li>
                 <a
-                  class="yellow-text"
+                  style="color: #FFD700"
                   href="https://www.linkedin.com/in/skylar-dorn-0a6784234/"
                   >Skylar's LinkedIn</a
                 >
@@ -303,23 +152,23 @@
             <ul>
               <li>
                 <a
-                  class="yellow-text"
+                  style="color: #FFD700"
                   href="https://github.com/maximus-cristian"
                   >Maximus' GitHub</a
                 >
               </li>
               <li>
-                <a class="yellow-text" href="https://github.com/matthewtlarson"
+                <a style="color: #FFD700" href="https://github.com/matthewtlarson"
                   >Matthew's GitHub</a
                 >
               </li>
               <li>
-                <a class="yellow-text" href="https://github.com/ryrathb"
+                <a style="color: #FFD700" href="https://github.com/ryrathb"
                   >Ryan's GitHub</a
                 >
               </li>
               <li>
-                <a class="yellow-text" href="https://github.com/skylardorn"
+                <a style="color: #FFD700" href="https://github.com/skylardorn"
                   >Skylar's GitHub</a
                 >
               </li>
@@ -344,5 +193,7 @@
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
     <script src="js/charts.js"></script>
+    <script src= "/js/quotes.js"></script>
+    <script src= "/js/dailyprogress.js"></script>
   </body>
 </html>

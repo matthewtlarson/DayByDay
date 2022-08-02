@@ -1,5 +1,5 @@
 /* Custom Stylesheet */
-nav ul a,
+/*nav ul a,
 nav .brand-logo {
   color: #444;
 }
@@ -8,10 +8,10 @@ nav .brand-logo {
 
 
 .navbar-brand {
-    position: relative;
-    background: url(../images/logo.png);
-    width: 170px;
-    left: 15px;
+    position: relative,
+    background: url(../images/logo.png),
+    width: 170px,
+    left: 15px,
 }
 
 p {
@@ -39,7 +39,7 @@ p {
     width: 50%;
    }
    /* Clear floats after the columns */
-   .row:after {
+   /*.row:after {
     content: "";
     display: table;
     clear: both;
@@ -61,4 +61,4 @@ p {
 }
 footer.page-footer {
   margin: 0;
-}
+}*/
