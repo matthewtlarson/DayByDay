@@ -1,9 +1,7 @@
 let exportAuth;
 let exportQuote;
-quoteEl = document.querySelector("#quoteID");//placeholder
-//addFavButton = document.querySelector('');
-//authorEl = document.querySelector("");//placeholder
-buttonEl = document.querySelector("#genQuote");//placeholder
+quoteEl = document.querySelector("#quoteID");
+buttonEl = document.querySelector("#genQuote");
 
 const peace = {
 	method: 'POST',
@@ -108,37 +106,5 @@ let getQuote = async () => {
     quoteEl.textContent = randomQuote.quote;
 }
 
-
-/*const addFav = async (event) => {
-    event.preventDefault();
-
-    const author = document.querySelector('').value.trim(); //placeholder
-    const quote = document.querySelector('').value.trim(); //placeholder
-    
-
-    if (author && quote) {
-      const response = await fetch('/api/favorites/add', { //placeholder
-        method: 'POST',
-        body: JSON.stringify({ author, quote }),
-        headers: { 'Content-Type': 'application/json' },
-    });
-    }
-
-    else {
-        alert('Failed to add quote');
-    }
-};*/
-
-//document.addEventListener('click', addFav); //placeholder
-
 buttonEl.addEventListener("click", getQuote);
 
-//items.properties.name.description
-//items.properties.quote.description
-
-//topics 
-//time
-//positive
-//trust
-//peace
-//hope

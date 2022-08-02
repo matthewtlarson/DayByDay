@@ -1,5 +1,3 @@
-//other exports, the javascriupt toolkit we want to use// 
-
 module.exports = {
   get_emoji: () => {
     const randomNum = Math.random();
