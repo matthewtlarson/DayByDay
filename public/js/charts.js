@@ -1,6 +1,6 @@
 const Chart = require('chart.js');
 const ctx = document.getElementById('myChart');
-require(['path/to/chartjs/dist/chart.min.js'], function(Chart){
+
   const myChart = new Chart(ctx, {
     type: 'line',
       data: data,
@@ -25,4 +25,4 @@ require(['path/to/chartjs/dist/chart.min.js'], function(Chart){
           pointHoverRadius: 15
         }
       ]});
-});
+
