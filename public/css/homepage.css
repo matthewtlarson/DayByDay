@@ -1,0 +1,12 @@
+.yolo{
+  color: rgb(0, 0, 0);
+}
+
+body{
+  background-image: linear-gradient(to bottom right, rgb(0, 2, 100), rgb(82, 82, 82));
+  font-family: 'Lora', serif;
+}
+
+.gradient-button {
+  background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)
+}
