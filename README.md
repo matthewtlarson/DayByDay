@@ -19,7 +19,8 @@ We utiilized serverall third-party applications to increase the flow of our proj
 
 Login, or sign up to access the main page. The main page is presented with previously saved quotes, as well as data to show user progress. Generate a quote to recieve your daily pick-me-up, save it to your user-profile if valueable to you. 
 
-![mainUI](./public/img/Application%20capture.JPG)
+![mainUI](./public/img/homepage-styled.png)
+![login](./public/img/login-styled.png)
 ![signup](./public/img/signup%20capture.JPG)
 
 ## License 
