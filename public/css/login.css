@@ -1,7 +1,7 @@
 body{
-    background-color: #d4d4d4;
-    font-family: 'Lora', serif;
-  }
+  background-image: linear-gradient(to bottom right, rgb(0, 2, 100), rgb(82, 82, 82));
+  font-family: 'Lora', serif;
+}
   
   #social{
     position:fixed;
